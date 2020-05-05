@@ -54,7 +54,7 @@ for auction in auctionList:
 print(auctionResults)
 
 with open("output.json", 'w') as output:
-    json.dump(auctionResults, output)
+    json.dump(auctionResults, output, indent=4, sort_keys=True)
 
 
 
