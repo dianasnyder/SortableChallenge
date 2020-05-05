@@ -1,4 +1,5 @@
 import json
+import sys
 
 class UnitAuction:
     highestAdjustedBid = 0
@@ -8,9 +9,8 @@ class UnitAuction:
 with open("config.json") as config:
     configData = json.load(config)
 
-# load input
-with open("input.json") as input:
-    auctionList = json.load(input)
+# read in input
+auctionList = json.load(sys.stdin)
 
 # dict keyed on site name
 sitesConfig = {site["name"]:site for site in configData["sites"]}
