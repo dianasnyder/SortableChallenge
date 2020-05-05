@@ -53,7 +53,9 @@ for auction in auctionList:
 
 print(auctionResults)
 
-#TODO: output auctionResults
+with open("output.json", 'w') as output:
+    json.dump(auctionResults, output)
+
 
 
 
