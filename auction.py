@@ -8,15 +8,14 @@ class UnitAuction:
 with open("config.json") as config:
     configData = json.load(config)
 
-# dict keyed on site name
-sitesConfig = {site["name"]:site for site in configData["sites"]}
-# dict keyed on bidder name
-bidderAdjustments = {bidder["name"]:bidder for bidder in configData["bidders"]}
-
 # load input
 with open("input.json") as input:
     auctionList = json.load(input)
 
+# dict keyed on site name
+sitesConfig = {site["name"]:site for site in configData["sites"]}
+# dict keyed on bidder name
+bidderAdjustments = {bidder["name"]:bidder for bidder in configData["bidders"]}
 
 
 # run auction
