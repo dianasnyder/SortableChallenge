@@ -31,9 +31,8 @@ for auction in auctionList:
     unitAuctions = {unit: UnitAuction() for unit in auction["units"]}
 
     for bid in auction["bids"]:
-        print("\n", bid, "\n")
         unitAuction = unitAuctions.get(bid["unit"])
-        bidderAdjustment = bidderAdjustments[bid["bidder"]]
+        bidderAdjustment = bidderAdjustments.get(bid["bidder"])
 
         adjustedBid = bid["bid"] 
         # can only win auction if valid bidder for site, for a valid unit, bidder is in biddersList
@@ -44,14 +43,10 @@ for auction in auctionList:
             if (adjustedBid > siteData["floor"] and adjustedBid > unitAuction.highestAdjustedBid):
                 unitAuction.highestAdjustedBid = adjustedBid
                 unitAuction.highestBid = bid
-                print("\nbid winner found")
-                print(unitAuction.highestAdjustedBid)
-                print(unitAuction.highestBid)
 
     # verify output proper if auction invalid or no one wins
     auctionResults.append([unitAuction.highestBid for unitName, unitAuction in unitAuctions.items()])
 
-print(auctionResults)
 
 with open("output.json", 'w') as output:
     json.dump(auctionResults, output, indent=4, sort_keys=True)
