@@ -5,6 +5,8 @@ class UnitAuction:
     highestAdjustedBid = 0
     highestBid = None
 
+
+
 # load config
 with open("config.json") as config:
     configData = json.load(config)
@@ -40,13 +42,15 @@ for auction in auctionList:
         # linear search through bidders - could make constant by transforming bidders lists to dict
         if bid["bidder"] in siteData["bidders"] and unitAuction and bidderAdjustment:
             adjustedBid = bid["bid"] * (1 + bidderAdjustment["adjustment"])
-            if (adjustedBid > siteData["floor"] and adjustedBid > unitAuction.highestAdjustedBid):
+            if (adjustedBid >= siteData["floor"] and adjustedBid > unitAuction.highestAdjustedBid):
                 unitAuction.highestAdjustedBid = adjustedBid
                 unitAuction.highestBid = bid
 
     # verify output proper if auction invalid or no one wins
-    auctionResults.append([unitAuction.highestBid for unitName, unitAuction in unitAuctions.items()])
+    auctionResults.append([unitAuction.highestBid for unitName, unitAuction in unitAuctions.items() if unitAuction.highestBid])
 
+# enable to print output to stdout
+#json.dump(auctionResults, sys.stdout, indent=4, sort_keys=True)
 
 with open("output.json", 'w') as output:
     json.dump(auctionResults, output, indent=4, sort_keys=True)

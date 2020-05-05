@@ -12,8 +12,8 @@
         },
         {
             "name": "highFloor",
-            "bidders": ["AUCT", "BIDD"],
-            "floor": 123456789
+            "bidders": ["AUCT", "BIDD", "positive"],
+            "floor": 100
         }
     ],
     "bidders": [

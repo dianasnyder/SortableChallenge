@@ -1,0 +1,28 @@
+[
+    {
+        "site": "highFloor",
+        "units": ["banner", "sidebar", "box", "box2"],
+        "bids": [
+            {
+                "bidder": "AUCT",
+                "unit": "sidebar",
+                "bid": 100
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "box",
+                "bid": 100
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "box2",
+                "bid": 99
+            },
+            {
+                "bidder": "positive",
+                "unit": "banner",
+                "bid": 51
+            }
+        ]
+    }
+]
