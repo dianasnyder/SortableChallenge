@@ -1,0 +1,29 @@
+[
+    [],
+    [
+        {
+            "bid": 60,
+            "bidder": "BIDD",
+            "unit": "sidebar"
+        }
+    ],
+    [
+        {
+            "bid": 51,
+            "bidder": "positive",
+            "unit": "banner"
+        }
+    ],
+    [
+        {
+            "bid": 36,
+            "bidder": "AUCT",
+            "unit": "banner"
+        },
+        {
+            "bid": 60,
+            "bidder": "BIDD",
+            "unit": "sidebar"
+        }
+    ]
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "site": "noBidders",
+        "units": ["banner", "sidebar"],
+        "bids": [
+            {
+                "bidder": "AUCT",
+                "unit": "badunit",
+                "bid": 35
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "sidebar",
+                "bid": 1
+            },
+            {
+                "bidder": "unknown",
+                "unit": "sidebar",
+                "bid": 100
+            }
+
+        ]
+    },
+    {
+        "site": "houseofcheese.com",
+        "units": ["banner", "sidebar"],
+        "bids": [
+            {
+                "bidder": "AUCT",
+                "unit": "invalid",
+                "bid": 35
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "sidebar",
+                "bid": 60
+            },
+            {
+                "bidder": "positive",
+                "unit": "sidebar",
+                "bid": 100
+            }
+
+        ]
+    },
+    {
+        "site": "highFloor",
+        "units": ["banner", "sidebar", "box", "box2"],
+        "bids": [
+            {
+                "bidder": "AUCT",
+                "unit": "sidebar",
+                "bid": 100
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "box",
+                "bid": 100
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "box2",
+                "bid": 99
+            },
+            {
+                "bidder": "positive",
+                "unit": "banner",
+                "bid": 51
+            }
+        ]
+    },
+    {
+        "site": "houseofcheese.com",
+        "units": ["banner", "sidebar"],
+        "bids": [
+            {
+                "bidder": "AUCT",
+                "unit": "banner",
+                "bid": 35
+            },
+            {
+                "bidder": "BIDD",
+                "unit": "sidebar",
+                "bid": 60
+            },
+            {
+                "bidder": "AUCT",
+                "unit": "sidebar",
+                "bid": 55
+            },
+            {
+                "bidder": "AUCT",
+                "unit": "banner",
+                "bid": 36
+            },
+            {
+                "bidder": "AUCT",
+                "unit": "sidebar",
+                "bid": 36
+            }
+        ]
+    }
+]

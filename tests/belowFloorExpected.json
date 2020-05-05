@@ -1,0 +1,14 @@
+[
+    [
+        {
+            "bid": 51,
+            "bidder": "positive",
+            "unit": "banner"
+        },
+        {
+            "bid": 100,
+            "bidder": "BIDD",
+            "unit": "box"
+        }
+    ]
+]
